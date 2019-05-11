@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: ppi_enrichment_full</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ppi_enrichment_full {STRINGdb}"><tr><td>ppi_enrichment_full {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+ppi_enrichment_full
+</h2>
+
+<h3>Description</h3>
+
+<p>Compute the enrichment in protein-protein interactions of a sorted list of proteins.  
+The computation is repeated at different positions in the list.  
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ppi_enrichment_full(hitList, ppi_network, sliceWindow, edgeWindow, windowExtendedReferenceThreshold, growingWindowLimit, quiet)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>hitList</code></td>
+<td>
+
+<p>sorted list of proteins (from the most significant to the least significant)
+</p>
+</td></tr>
+<tr valign="top"><td><code>ppi_network</code></td>
+<td>
+
+<p>an igraph object containing the protein-protein interactions' graph.
+</p>
+</td></tr>
+<tr valign="top"><td><code>sliceWindow</code></td>
+<td>
+
+<p>defines the interval in proteins after which to compute the enrichment, scanning the list (i.e. the resolution)
+</p>
+</td></tr>
+<tr valign="top"><td><code>edgeWindow</code></td>
+<td>
+
+<p>size of the window that we use to compute the enrichment (i.e. the window pvalue is computed using the proteins inside this &quot;edgeWindow&quot;)
+</p>
+</td></tr>
+<tr valign="top"><td><code>windowExtendedReferenceThreshold</code></td>
+<td>
+
+<p>when we compute the &quot;windowExtended&quot; pvalue we are computing the pvalue that considers the following interactions:
+1) the interactions inside the edgeWindow (as we do with the edgeWindow pvalue)
+2) the interactions that connects the proteins in the edgeWindow with the proteins in another window at the beginning of the list (i.e. the windowExtendedReference).
+windowExtendedReferenceThrehold defines the size of this windowExtendedReference window.
+In this way we can compute, in a reliable way, the enrichment of a sorted list of proteins, in various positions of the list.
+</p>
+</td></tr>
+<tr valign="top"><td><code>growingWindowLimit</code></td>
+<td>
+
+<p>stop to compute the enrichment (from position 1 to position n) after growingWindowLimit proteins in the sorted list.
+(this limit speeds up the computation of the 2 other types of enrichment)
+</p>
+</td></tr>
+<tr valign="top"><td><code>quiet</code></td>
+<td>
+
+<p>if set to TRUE the method runs in quiet mode (turning off any output message)
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>enrichment</code></td>
+<td>
+<p>vector containing the enrichments in protein-protein interactions of the input list of genes (the length of the vector is length(hitList)/sliceWindow ).    </p>
+</td></tr>
+<tr valign="top"><td><code>enrichmentWindow</code></td>
+<td>
+<p>vector containing the enrichments in protein-protein interactions of the input list of genes (the length of the vector is length(hitList)/sliceWindow ).  The enrichment is computed considering only the proteins inside the sliding window</p>
+</td></tr>
+<tr valign="top"><td><code>enrichmentWindowExtended</code></td>
+<td>
+<p>vector containing the enrichments in protein-protein interactions of the input list of genes (the length of the vector is length(hitList)/sliceWindow ).
+Look at the description of the windowExtendedReferenceThreshold variable
+</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+
+<h3>References</h3>
+
+<p>Pradines JR, Farutin V, Rowley S, Dancik V. Analyzing protein lists with large networks: edge-count probabilities in random graphs with given expected degrees. J. Comput. Biol. 2005;12:113-128.
+Franceschini, A et al. (2013). STRING v9.1: protein-protein interaction networks, with increased coverage and integration. In:Nucleic Acids Res. 2013 Jan;41(Database issue)
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

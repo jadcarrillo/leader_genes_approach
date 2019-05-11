@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: multi_map_df</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for multi_map_df {STRINGdb}"><tr><td>multi_map_df {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+multi_map_df
+</h2>
+
+<h3>Description</h3>
+
+<p>mapping function (it add the possibility to map using more than one column of the data frame)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+multi_map_df(dfToMap, dfMap, strColsFrom, strColFromDfMap, strColToDfMap, caseSensitive=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dfToMap</code></td>
+<td>
+
+<p>input data frame (that contains the columns that need to be mapped)
+</p>
+</td></tr>
+<tr valign="top"><td><code>dfMap</code></td>
+<td>
+
+<p>data frame containing the mapping data
+</p>
+</td></tr>
+<tr valign="top"><td><code>strColsFrom</code></td>
+<td>
+
+<p>sorted vector containing the names of the columns to be used in the input data frame for the mapping (the order of the elements in the vector defines the priority for the mapping)
+</p>
+</td></tr>
+<tr valign="top"><td><code>strColFromDfMap</code></td>
+<td>
+
+<p>name of the column in the mapping data frame to be used as source for the mapping
+</p>
+</td></tr>
+<tr valign="top"><td><code>strColToDfMap</code></td>
+<td>
+
+<p>name of the column in the mapping data frame to be used as target for the mapping
+</p>
+</td></tr>
+<tr valign="top"><td><code>caseSensitive</code></td>
+<td>
+
+<p>specify whether the mapping should be case sensitive
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>data frame with an additional column containing the result of the mapping
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

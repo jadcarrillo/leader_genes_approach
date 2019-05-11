@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: ppi_enrichment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ppi_enrichment {STRINGdb}"><tr><td>ppi_enrichment {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+ppi_enrichment
+</h2>
+
+<h3>Description</h3>
+
+<p>Computes the enrichment in protein-protein interactions.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ppi_enrichment(hitList, ppi_network)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>hitList</code></td>
+<td>
+
+<p>sorted list of proteins (from the most significant to the least significant)
+</p>
+</td></tr>
+<tr valign="top"><td><code>ppi_network</code></td>
+<td>
+
+<p>an igraph object containing the graph of the protein-protein interaction's network.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>enrichment</code></td>
+<td>
+<p>pvalue that describes the probability to get such a number of interactions by chance</p>
+</td></tr>
+<tr valign="top"><td><code>lambda</code></td>
+<td>
+<p>expected number of interactions</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+
+<h3>References</h3>
+
+<p>Pradines JR, Farutin V, Rowley S, Dancik V. Analyzing protein lists with large networks: edge-count probabilities in random graphs with given expected degrees. J. Comput. Biol. 2005;12:113-128.
+Franceschini, A et al. (2013). STRING v9.1: protein-protein interaction networks, with increased coverage and integration. In:Nucleic Acids Res. 2013 Jan;41(Database issue)
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

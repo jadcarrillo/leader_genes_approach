@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: get_graph</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for get_graph {STRINGdb}"><tr><td>get_graph {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+get_graph
+</h2>
+
+<h3>Description</h3>
+
+<p>Return an igraph object with the STRING network (for information about iGraph visit http://igraph.sourceforge.net)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+get_graph()
+</pre>
+
+
+<h3>Value</h3>
+
+<p>igraph object with the STRING network
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+
+<h3>References</h3>
+
+<p>Csardi G, Nepusz T: The igraph software package for complex network research, InterJournal, Complex Systems 1695. 2006. 
+http://igraph.sf.net
+</p>
+
+
+<h3>See Also</h3>
+
+<p>In order to simplify the most common tasks, we do also provide convenient functions that wrap some iGraph functions.
+get_interactions(string_ids)   # returns the interactions in between the input proteins
+get_neighbors(string_ids)      # Get the neighborhoods of a protein (or of a vector of proteins) that is given in input.
+get_subnetwork(string_ids)     # returns a subgraph from the given input proteins
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: get_enrichment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for get_enrichment {STRINGdb}"><tr><td>get_enrichment {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+get_enrichment
+</h2>
+
+<h3>Description</h3>
+
+<p>Returns the enrichment in pathways of the vector of STRING proteins that is given in input.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+get_enrichment(string_ids, category = "Process", methodMT = "fdr", iea = TRUE, minScore=NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>string_ids</code></td>
+<td>
+
+<p>a vector of STRING identifiers.
+</p>
+</td></tr>
+<tr valign="top"><td><code>category</code></td>
+<td>
+
+<p>category for which to compute the enrichment (i.e. &quot;Process&quot;, &quot;Component&quot;, &quot;Function&quot;, &quot;KEGG&quot;, &quot;Pfam&quot;, &quot;InterPro&quot;). The default category is &quot;Process&quot;.
+</p>
+</td></tr>
+<tr valign="top"><td><code>methodMT</code></td>
+<td>
+
+<p>method to be used for the multiple testing correction. (i.e.  &quot;fdr&quot;, &quot;bonferroni&quot;). The default is &quot;fdr&quot;.
+</p>
+</td></tr>
+<tr valign="top"><td><code>iea</code></td>
+<td>
+
+<p>specify whether you also want to use electronic inference annotations
+</p>
+</td></tr>
+<tr valign="top"><td><code>minScore</code></td>
+<td>
+
+<p>with Tissue and Disease categories is possible to filter the annotations having an annotation score higher than this threshold (from 0 to 5)
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Data frame containing the enrichment in pathways of the vector of STRING proteins that is given in input.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

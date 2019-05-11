@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for map {STRINGdb}"><tr><td>map {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+map
+</h2>
+
+<h3>Description</h3>
+
+<p>Maps the gene identifiers of the input dataframe to STRING identifiers.
+It returns the input dataframe with the &quot;STRING_id&quot; additional column.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+map(my_data_frame, my_data_frame_id_col_names, takeFirst=TRUE, removeUnmappedRows=FALSE, quiet=FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>my_data_frame</code></td>
+<td>
+
+<p>data frame provided as input.
+</p>
+</td></tr>
+<tr valign="top"><td><code>my_data_frame_id_col_names</code></td>
+<td>
+
+<p>vector contatining the names of the columns of &quot;my_data_frame&quot; that have to be used for the mapping.
+</p>
+</td></tr>
+<tr valign="top"><td><code>takeFirst</code></td>
+<td>
+
+<p>boolean indicating what to do in case of multiple STRING proteins that map to the same name. 
+If TRUE, only the first of those is taken. Otherwise all of them are used. (default TRUE)
+</p>
+</td></tr>
+<tr valign="top"><td><code>removeUnmappedRows</code></td>
+<td>
+
+<p>remove the rows that cannot be mapped to STRING 
+(by default those lines are left and their STRING_id is set to NA).
+</p>
+</td></tr>
+<tr valign="top"><td><code>quiet</code></td>
+<td>
+
+<p>Setting this variable to TRUE we can avoid printing the warning relative to the unmapped values.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Returns the dataframe that is given in input with the &quot;STRING_id&quot; additional column.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

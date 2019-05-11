@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: add_diff_exp_color</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for add_diff_exp_color {STRINGdb}"><tr><td>add_diff_exp_color {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+add_diff_exp_color
+</h2>
+
+<h3>Description</h3>
+
+<p>Take in input a dataframe containing a logFC column that reports the logarithm of the difference in expression level.
+Add a &quot;color&quot; column to the data frame such that strongly downregulated genes are colored in green and strong upregulated genes are in red.
+When the down or up-regulation is instead weak the intensity of the color gets weaker as well, accordingly.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+add_diff_exp_color(screen, logFcColStr="logFC" )
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>screen</code></td>
+<td>
+
+<p>Dataframe containing the results of the experiment (e.g. the analyzed results of a microarray or RNAseq experiment)
+</p>
+</td></tr>
+<tr valign="top"><td><code>logFcColStr</code></td>
+<td>
+
+<p>name of the colum that contains the logFC of the expression 
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>vector containing the colors
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: post_payload</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for post_payload {STRINGdb}"><tr><td>post_payload {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+post_payload
+</h2>
+
+<h3>Description</h3>
+
+<p>Posts the input to STRING and returns an identifier that you can use to access the payload when you enter in our website.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+post_payload(stringIds, colors=NULL, comments=NULL, links=NULL, iframe_urls=NULL, logo_imgF=NULL, legend_imgF=NULL )
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>stringIds</code></td>
+<td>
+
+<p>vector of STRING identifiers.
+</p>
+</td></tr>
+<tr valign="top"><td><code>colors</code></td>
+<td>
+
+<p>vector containing the colors to use for a every STRING identifier ( the order of the elements must match those in the string_ids vector)
+</p>
+</td></tr>
+<tr valign="top"><td><code>comments</code></td>
+<td>
+
+<p>vector containing the comments to use for every STRING identifier ( the order of the elements must match those in the string_ids vector)
+</p>
+</td></tr>
+<tr valign="top"><td><code>links</code></td>
+<td>
+
+<p>vector containing the links to use for every STRING identifier ( the order of the elements must match those in the string_ids vector)
+</p>
+</td></tr>
+<tr valign="top"><td><code>iframe_urls</code></td>
+<td>
+
+<p>vector containing the urls of the iframes to use for every STRING identifier 
+( the order of the elements must match those in the string_ids vector).
+</p>
+</td></tr>
+<tr valign="top"><td><code>logo_imgF</code></td>
+<td>
+
+<p>path to a file containing the logo image to be display in the STRING website
+</p>
+</td></tr>
+<tr valign="top"><td><code>legend_imgF</code></td>
+<td>
+
+<p>path to a file containing a legend image to be display in the STRING website
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>identifier of the payload.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

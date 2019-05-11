@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: get_png</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for get_png {STRINGdb}"><tr><td>get_png {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+get_png
+</h2>
+
+<h3>Description</h3>
+
+<p>Returns a png image of a STRING protein network with the given identifiers.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+get_png(string_ids, required_score=NULL, network_flavor="evidence", file=NULL, payload_id=NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>string_ids</code></td>
+<td>
+
+<p>a vector of STRING identifiers.
+</p>
+</td></tr>
+<tr valign="top"><td><code>required_score</code></td>
+<td>
+
+<p>minimum STRING combined score of the interactions 
+(if left NULL we get the combined score of the object, which is 400 by default).
+</p>
+</td></tr>
+<tr valign="top"><td><code>network_flavor</code></td>
+<td>
+
+<p>specify the flavor of the network (&quot;evidence&quot;, &quot;confidence&quot; or &quot;actions&quot;.  default &quot;evidence&quot;).
+</p>
+</td></tr>
+<tr valign="top"><td><code>file</code></td>
+<td>
+
+<p>file where to save the image
+</p>
+</td></tr>
+<tr valign="top"><td><code>payload_id</code></td>
+<td>
+
+<p>identifier of the payload
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Returns a png image of a STRING protein network with the given identifiers.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Class '&quot;STRINGdb&quot;'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for STRINGdb-class {STRINGdb}"><tr><td>STRINGdb-class {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Class <code>"STRINGdb"</code></h2>
+
+<h3>Description</h3>
+
+<p>The R package STRINGdb provides a convenient interface to the STRING protein-protein interactions database for the R/bioconductor users.
+Please look at the manual/vignette to get additional informationd and examples on how to use the package.
+STRING is a database of known and predicted protein-protein interactions. It contains information from numerous 
+sources, including experimental repositories, computational prediction methods and public text collections. Each interaction is associated with a combined confidence score that integrates the various evidences. 
+STRING is regularly updated , the latest version 9.05 contains information on 5 millions proteins from more than 1100 species.
+The STRING web interface is freely accessible at: http://string-db.org/
+</p>
+
+
+<h3>Extends</h3>
+
+<p>All reference classes extend and inherit methods from <code>"<a href="../../methods/html/stdRefClass.html">envRefClass</a>"</code>.
+</p>
+
+
+<h3>Fields</h3>
+
+
+<dl>
+<dt><code>annotations</code>:</dt><dd><p>Object of class <code>data.frame</code> ~~ </p>
+</dd>
+<dt><code>annotations_description</code>:</dt><dd><p>Object of class <code>data.frame</code> ~~ </p>
+</dd>
+<dt><code>graph</code>:</dt><dd><p>Object of class <code>igraph</code> ~~ </p>
+</dd>
+<dt><code>proteins</code>:</dt><dd><p>Object of class <code>data.frame</code> ~~ </p>
+</dd>
+<dt><code>speciesList</code>:</dt><dd><p>Object of class <code>data.frame</code> ~~ </p>
+</dd>
+<dt><code>species</code>:</dt><dd><p>Object of class <code>numeric</code> ~~ </p>
+</dd>
+<dt><code>version</code>:</dt><dd><p>Object of class <code>character</code> ~~ </p>
+</dd>
+<dt><code>input_directory</code>:</dt><dd><p>Object of class <code>character</code> ~~ </p>
+</dd>
+<dt><code>backgroundV</code>:</dt><dd><p>Object of class <code>vector</code> ~~ </p>
+</dd>
+<dt><code>score_threshold</code>:</dt><dd><p>Object of class <code>numeric</code> ~~ </p>
+</dd>
+</dl>
+
+
+
+<h3>Methods</h3>
+
+
+<dl>
+<dt><code>set_background(background_vector)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>post_payload(stringIds, colors, comments, links, iframe_urls, logo_imgF, legend_imgF)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>plot_network(string_ids, payload_id, required_score)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>plot_ppi_enrichment(string_ids, file, sliceWindow, edgeWindow, windowExtendedReferenceThreshold, minVal, title)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>map(my_data_frame, my_data_frame_id_col_names, takeFirst, removeUnmappedRows, quiet)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>load()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_term_proteins(term_ids, string_ids, enableIEA)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_summary(string_ids)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_subnetwork(string_ids)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_ppi_enrichment_full(string_ids, sliceWindow, edgeWindow, windowExtendedReferenceThreshold, growingWindowLimit)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_ppi_enrichment(string_ids)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_proteins()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_png(string_ids, required_score, network_flavor, file, payload_id)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_neighbors(string_ids)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_link(string_ids, required_score, network_flavor, payload_id)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_interactions(string_ids)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_homologs_besthits(string_ids, symbets, target_species_id, bitscore_threshold)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_homologs(string_ids, target_species_id, bitscore_threshold)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_graph()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_enrichment(string_ids, category, methodMT, iea)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_clusters(string_ids, algorithm)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_annotations_desc()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>get_annotations()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>load_all()</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>initialize(...)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>add_proteins_description(screen)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>add_diff_exp_color(screen, logFcColStr)</code>:</dt><dd><p> ~~ </p>
+</dd>
+<dt><code>show()</code>:</dt><dd><p> ~~ </p>
+</dd>
+</dl>
+
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+
+<h3>References</h3>
+
+<p>Franceschini, A (2013). STRING v9.1: protein-protein interaction networks, with increased coverage and integration. In:'Nucleic Acids Res. 2013 Jan;41(Database issue):D808-15. doi: 10.1093/nar/gks1094. Epub 2012 Nov 29'.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>http://stitch-db.org
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+showClass("STRINGdb")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

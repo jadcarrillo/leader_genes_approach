@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: plot_ppi_enrichment_graph</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_ppi_enrichment_graph {STRINGdb}"><tr><td>plot_ppi_enrichment_graph {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+plot_ppi_enrichment_graph
+</h2>
+
+<h3>Description</h3>
+
+<p>Plots a graph showing the enrichment in protein interactions in various positions of the list of genes in input.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_ppi_enrichment_graph(proteins, ppi_network, file, sliceWindow, edgeWindow, windowExtendedReferenceThreshold, minVal, title, quiet)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>proteins</code></td>
+<td>
+
+<p>a vector of protein identifiers
+</p>
+</td></tr>
+<tr valign="top"><td><code>ppi_network</code></td>
+<td>
+
+<p>an igraph object containing the protein-protein interactions' graph.
+</p>
+</td></tr>
+<tr valign="top"><td><code>file</code></td>
+<td>
+
+<p>file where to save the graph as an image
+</p>
+</td></tr>
+<tr valign="top"><td><code>sliceWindow</code></td>
+<td>
+
+<p>defines the interval in proteins after which to compute the enrichment, scanning the list (i.e. the resolution)
+</p>
+</td></tr>
+<tr valign="top"><td><code>edgeWindow</code></td>
+<td>
+
+<p>size of the window that we use to compute the enrichment (i.e. the window pvalue is computed using the proteins inside this &quot;edgeWindow&quot;)
+</p>
+</td></tr>
+<tr valign="top"><td><code>windowExtendedReferenceThreshold</code></td>
+<td>
+
+<p>defines the size of a window at the beginning of the list. 
+The enrichment will be computed always including the proteins in this window
+</p>
+</td></tr>
+<tr valign="top"><td><code>title</code></td>
+<td>
+
+<p>title of the graph.
+</p>
+</td></tr>
+<tr valign="top"><td><code>minVal</code></td>
+<td>
+
+<p>minimum value that the pvalue can assume in the log-scale graph. If the p-value is lower, we convert the value to this minimum value
+</p>
+</td></tr>
+<tr valign="top"><td><code>quiet</code></td>
+<td>
+
+<p>if set to TRUE the method runs in quiet mode (turning off any output message)
+</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+
+<h3>References</h3>
+
+<p>Pradines JR, Farutin V, Rowley S, Dancik V. Analyzing protein lists with large networks: edge-count probabilities in random graphs with given expected degrees. J. Comput. Biol. 2005;12:113-128.
+Franceschini, A et al. (2013). STRING v9.1: protein-protein interaction networks, with increased coverage and integration. In:Nucleic Acids Res. 2013 Jan;41(Database issue)
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

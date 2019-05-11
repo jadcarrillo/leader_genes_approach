@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: benchmark_ppi_pathway_view</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for benchmark_ppi_pathway_view {STRINGdb}"><tr><td>benchmark_ppi_pathway_view {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+benchmark_ppi_pathway_view
+</h2>
+
+<h3>Description</h3>
+
+<p>Takes in input the results of the benchmark_ppi function, and constructs a new table that provides a view at the pathway level 
+(i.e. it list all the pathways to which the interactions belong)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+benchmark_ppi_pathway_view(benchmark_ppi_data_frame, precision_threshold=0.2, pathwayType = "KEGG")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>benchmark_ppi_data_frame</code></td>
+<td>
+
+<p>data frame that comes out from the benchmark_ppi function.
+</p>
+</td></tr>
+<tr valign="top"><td><code>precision_threshold</code></td>
+<td>
+
+<p>threshold that specify where to stop taking considering the interactions in the sorted input data frame (the list is scanned until the precision goes below this value).
+</p>
+</td></tr>
+<tr valign="top"><td><code>pathwayType</code></td>
+<td>
+
+<p>the pathway category to use (KEGG by default)
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>data frame containing the pathways (i.e. terms) of the input proteins. 
+Several parameters are reported: 
+pathway coverage (i.e. number of interactions in the list belonging to the pathway / maximum number of interactions between the pathay proteins (i.e. proteins * (proteins-1)/2 ) )
+total_representation (i.e. number of interactions in the list belonging to the pathway / size of the input data frame )
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

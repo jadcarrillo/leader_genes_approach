@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: plot_network</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_network {STRINGdb}"><tr><td>plot_network {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+plot_network
+</h2>
+
+<h3>Description</h3>
+
+<p>Plots an image of the STRING network with the given proteins.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+plot_network(string_ids, payload_id=NULL, required_score=NULL, add_link=TRUE, add_summary=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>string_ids</code></td>
+<td>
+
+<p>a vector of STRING identifiers
+</p>
+</td></tr>
+<tr valign="top"><td><code>payload_id</code></td>
+<td>
+
+<p>an identifier of payload data on the STRING server (see method post_payload for additional informations)
+</p>
+</td></tr>
+<tr valign="top"><td><code>required_score</code></td>
+<td>
+
+<p>a threshold on the score that overrides the default score_threshold, that we use only for the picture
+</p>
+</td></tr>
+<tr valign="top"><td><code>add_link</code></td>
+<td>
+
+<p>parameter to specify whether you want to generate and add a short link to the relative page in STRING. 
+As default this option is active but we suggest to deactivate it in case one is generating many images (e.g. in a loop). 
+Deactivating this option avoids to generate and store a lot of short-urls on our server.
+</p>
+</td></tr>
+<tr valign="top"><td><code>add_summary</code></td>
+<td>
+
+<p>parameter to specify whether you want to add a summary text to the picture. This summary includes a p-value and the number of proteins/interactions.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

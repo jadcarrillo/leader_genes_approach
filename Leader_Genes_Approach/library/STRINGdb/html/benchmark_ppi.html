@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: benchmark_ppi</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for benchmark_ppi {STRINGdb}"><tr><td>benchmark_ppi {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+benchmark_ppi
+</h2>
+
+<h3>Description</h3>
+
+<p>benchmark a list of protein-protein interactions using pathways (e.g. KEGG). 
+The function outputs a table where the interactions are mapped to KEGG and the number of TPs and FPs are counted.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+benchmark_ppi(interactions_dataframe, pathwayType = "KEGG", max_homology_bitscore = 60, precision_window=400, exclude_pathways="blacklist")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>interactions_dataframe</code></td>
+<td>
+
+<p>a data frame contaning the sorted interactions to be benchmarked. The data frame should have the following column names: proteinA, proteinB, score
+</p>
+</td></tr>
+<tr valign="top"><td><code>pathwayType</code></td>
+<td>
+
+<p>category to use to benchmark the interactions (default KEGG)
+</p>
+</td></tr>
+<tr valign="top"><td><code>max_homology_bitscore</code></td>
+<td>
+
+<p>filter out pairs of homologous proteins, having a similarity bitscore higher than this parameter
+</p>
+</td></tr>
+<tr valign="top"><td><code>precision_window</code></td>
+<td>
+
+<p>define the size of the precision window (i.e. the window used to scan the sorted interactions data frame in order to compute the benchmark precision).
+At the beginning and at the end of the sorted interactions data frame, the window is automatically enlarged (at the beginning) and reduced (at the end)
+</p>
+</td></tr>
+<tr valign="top"><td><code>exclude_pathways</code></td>
+<td>
+
+<p>Exlude the terms that should not be used for benchmarking. If this parameter is set to &quot;blacklist&quot;, a black list to be used mantained by our group is automatically downloaded from our servers (otherwise it is possible to specify a vector with the terms that have to be excluded).
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>interactions data frame where the interactions are mapped to KEGG and the number of TPs and FPs are counted.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

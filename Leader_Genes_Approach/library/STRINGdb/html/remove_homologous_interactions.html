@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: remove_homologous_interactions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for remove_homologous_interactions {STRINGdb}"><tr><td>remove_homologous_interactions {STRINGdb}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+remove_homologous_interactions
+</h2>
+
+<h3>Description</h3>
+
+<p>With this method it is possible to remove the interactions that are composed by a pair of homologous/similar proteins, having a similarity bitscore between each other higher than a threshold.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S4 method for signature 'STRINGdb'
+remove_homologous_interactions(interactions_dataframe, bitscore_threshold = 60)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>interactions_dataframe</code></td>
+<td>
+
+<p>a data frame contaning the sorted interactions to be benchmarked. The data frame should have the following column names: proteinA, proteinB, score
+</p>
+</td></tr>
+<tr valign="top"><td><code>bitscore_threshold</code></td>
+<td>
+
+<p>filter out pairs of homologous proteins, having a similarity bitscore higher than this parameter
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>interactions data frame where the homologous pairs have been removed, from the input interactions' data frame
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Andrea Franceschini
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>STRINGdb</em> version 1.22.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
